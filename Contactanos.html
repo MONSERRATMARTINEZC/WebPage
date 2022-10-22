@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cont&aacute;ctanos</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="img/icono.ico"/>
+        <link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
+		<script src="js/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="css/fnavjum.css"/>
+        <style>
+            .jumbotron 
+            {
+                background-image: url(contacto.jpg);
+            }
+        </style>
+    </head>
+    <body>  
+        <div class="container-fluid example2">
+          <nav class="navbar navbar-default" style="background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                </a>
+              </div>
+              <div id="navbar2" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="Inicio.html">Inicio</a></li>
+                  <li><a href="servicios.html">Servicios</a></li>
+                  <li><a href="Quienessomos.html">Qui&eacute;nes somos</a></li>
+                  <li><a href="Contactanos.html">Cont&aacute;ctanos</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        
+        <div class="container animated-central fadeInCentral" style="font-family: Segoe UI Light; color: white; text-shadow: 0px 10px 7px black;">
+          <div class="jumbotron">
+            <h1>Ponte en contacto con nosotros</h1> 
+            <br><br>
+          </div>
+          <br><br>
+        </div>
+        
+        <div class="row col-sm-12 animated-central fadeInCentral">
+            <div class="col-sm-6">
+                <div id="map" style="width:autopx;height:330px;">
+                    <script type="text/javascript">
+
+                        function initMap() {
+                            var myLatLng = {lat: 31.6001629, lng: -106.4066045};
+
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                              zoom: 17,
+                              center: myLatLng,
+                              gestureHandling: 'greedy'
+                            });
+
+                            var marker = new google.maps.Marker({
+                              position: myLatLng,
+                              map: map,
+                              title: 'iHelp',
+                              animation: google.maps.Animation.DROP
+                            });
+                            
+                            marker.addListener('click', function() {
+                              infowindow.open(map, marker);
+                            });
+                          }
+
+                    </script>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 text-center" style="font-family: Segoe UI Light;">
+                <h3>Envianos tus comentarios. ¡Tu opini&oacute;n es importante para nosotros.!</h3>
+                
+                <form method="post" action="enviar.php">
+                  <div class="col-sm-6" style="text-align: left">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+                      </div>
+                  </div>
+                  <div class="col-sm-6" style="text-align: left">
+                      <div class="form-group">
+                        <input type="tel" class="form-control" name="telefono" placeholder="Tel&eacute;fono" required>
+                      </div>
+                  </div>
+                  <div class="col-sm-12" style="text-align: left">
+                      <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+                      </div>
+                  </div>
+                  <div class="col-sm-12" style="text-align: left">
+                      <div class="form-group">
+                        <textarea class="form-control" rows="4" name="comentario" placeholder="Comentario / Opini&oacute;n / Queja" required></textarea>
+                      </div>
+                  </div>
+                  <div  class="col-sm-12">
+                      <button type="submit" class="btn btn-success" name="btn_enviar"><span class="glyphicon glyphicon-envelope"></span>&nbsp; Enviar</button>
+                  </div>
+                  <input type="hidden" id="app_id" name="app_id" value="1" />
+                </form>          
+            </div>
+        </div>
+            
+        <br><br>
+            
+        <div class="row">
+        </div>
+        
+        <br>
+        
+        <div class="row animated-central fadeInCentral" style="font-family: Segoe UI Light;">
+            <div class="col-sm-12 text-center">
+                <div class="text-center" style="font-size: 20px; font-weight: bold">
+                    <p>Equipo de trabajo</p>
+                </div>
+                <br>
+                <div class="col-sm-4">
+                    <div class="card">
+                      <div class="contenido"> 
+                        <p><span style="font-weight: bold; font-size: 17px">Jes&uacute;s Adrian Chavez Galindo</span><br><span style="font-size: 13px">
+                        <p><span class="glyphicon glyphicon-phone"></span>&nbsp; (656) 5533340<p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                      <div class="contenido"> 
+                        <p><span style="font-weight: bold; font-size: 17px">Nancy Judith Gurrola Hernandez</span><br><span style="font-size: 13px">
+                        <p><span class="glyphicon glyphicon-phone"></span>&nbsp; (656) 5644516<p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                      <div class="contenido"> 
+                        <p><span style="font-weight: bold; font-size: 17px">Monserat Mart&iacute;nez Cabanillas</span><br><span style="font-size: 13px">
+                        <p><span class="glyphicon glyphicon-phone"></span>&nbsp; (656) 5727829<p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+        <div class="row animated-central fadeInCentral" style="font-family: Segoe UI Light; color: black">
+            <div class="col-sm-12 text-center" style="font-size: 20px;">
+                <div style="font-weight: bold">
+                    <p>M&aacute;s Informaci&oacute;n</p>
+                </div>
+                <p><span class="glyphicon glyphicon-map-marker"></span>&nbsp; Av. Universidad Tecnológica No. 3051, Col. Lote Bravo II
+                    Cd. Juárez, Chih. C.P. 32695</p>
+                <p><span class="glyphicon glyphicon-earphone"></span>&nbsp; (656) 649.0600<p>
+                <p><span class="glyphicon glyphicon-envelope"></span>&nbsp; alumnos.utcj.edu.mx<p>
+                <p><span class="glyphicon glyphicon-calendar"></span>&nbsp; Horario: &nbsp; Lunes - Viernes (8:00 - 19:00 horas)<p>
+            </div>
+        </div>
+        
+        <br>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmfffg9VPVr9BRnczNRlbvVB0gZZeGdGY&callback=initMap"></script>
+        
+    </body>
+    <script>
+        $(document).ready(function() {
+            var query_string = window.location.search;
+            if (query_string != "") {
+              var url_params = new URLSearchParams(query_string);
+              var valor = url_params.get('p');
+              if (valor == "1") {
+                setTimeout(Envio, 400);
+              }
+            }
+        });
+        
+        function Envio() {
+            swal('Información enviada','Pronto estaremos en contacto con usted.','success');
+        }
+    </script>    
+</html>
+<style>
+  body {
+margin: 0;
+padding: 0;
+background: url(fondo.jpg) no-repeat center top;
+background-size: cover;
+font-family: sans-serif;
+height: 1350px 1000px;
+}
+</style>
